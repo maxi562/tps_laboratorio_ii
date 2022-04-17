@@ -17,5 +17,10 @@ namespace MiCalculadora
             InitializeComponent();
         }
 
+        private void Operar_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
     }
 }

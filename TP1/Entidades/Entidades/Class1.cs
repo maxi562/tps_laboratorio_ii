@@ -19,6 +19,7 @@ namespace Entidades
         {
             char Aux = ValidarOperador(operador);
             double Retorno = 0;
+            
             switch (Aux)
             {
                 case '+':
@@ -34,6 +35,10 @@ namespace Entidades
                     if (Operando2 != 0)
                     {
                         Retorno = Operando1 / Operando2;
+                    }
+                    else
+                    {
+                        Retorno = 0;
                     }
                     break ;
             }
@@ -57,7 +62,7 @@ namespace Entidades
             this.numero = 0;
         }
 
-        private double ValidarOperando(string strNumero)
+        private static double ValidarOperando(string strNumero)
         {
             Double Retorno = 0;
 
@@ -72,7 +77,7 @@ namespace Entidades
             return Retorno;
         }
 
-        private bool EsBinario (string binario)
+        private static bool EsBinario (string binario)
         {
             bool Retorno = true;
             foreach(char ch in binario)
@@ -87,7 +92,7 @@ namespace Entidades
             return Retorno;
         }
 
-        public string BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
             int n = 0;      
             string Retorno = "Valor inválido";
@@ -109,11 +114,38 @@ namespace Entidades
            
          }
         
-        public string DecimalBinario (double numero)
+        public static string DecimalBinario (double numero)
         {
-            double Auxiliar = 0;
+            int Auxiliar = (int)Math.Round(numero);
+            string binario = "";
+            string fallo = "Valor inválido";
 
+            while(Auxiliar > 0)
+            {
+                binario = Auxiliar % 2 + binario;
+                Auxiliar /= 2;
+            }
+
+            if(EsBinario(binario))
+            {
+                return binario;
+            }
+            else
+            {
+                return fallo;
+            }
+
+            
 
         }
+
+        public static string DecimalBinario(string numero)
+        {
+            double Auxiliar = Convert.ToDouble(numero);
+            string binario = DecimalBinario(numero);
+
+            return binario;
+        }
+
     }
 }
