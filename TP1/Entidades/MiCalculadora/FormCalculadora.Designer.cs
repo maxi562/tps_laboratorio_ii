@@ -52,7 +52,7 @@
             this.cmb_Operar.Location = new System.Drawing.Point(307, 47);
             this.cmb_Operar.Name = "cmb_Operar";
             this.cmb_Operar.Size = new System.Drawing.Size(121, 25);
-            this.cmb_Operar.TabIndex = 0;
+            this.cmb_Operar.TabIndex = 1;
             // 
             // txt_OperandoDos
             // 
@@ -61,7 +61,7 @@
             this.txt_OperandoDos.Name = "txt_OperandoDos";
             this.txt_OperandoDos.PlaceholderText = "Ingrese Número";
             this.txt_OperandoDos.Size = new System.Drawing.Size(100, 68);
-            this.txt_OperandoDos.TabIndex = 1;
+            this.txt_OperandoDos.TabIndex = 2;
             // 
             // txt_OperandoUno
             // 
@@ -70,7 +70,7 @@
             this.txt_OperandoUno.Name = "txt_OperandoUno";
             this.txt_OperandoUno.PlaceholderText = "Ingrese Número";
             this.txt_OperandoUno.Size = new System.Drawing.Size(100, 68);
-            this.txt_OperandoUno.TabIndex = 2;
+            this.txt_OperandoUno.TabIndex = 0;
             // 
             // btn_Operar
             // 
@@ -107,18 +107,20 @@
             this.btn_ConvertiraBinario.Location = new System.Drawing.Point(197, 267);
             this.btn_ConvertiraBinario.Name = "btn_ConvertiraBinario";
             this.btn_ConvertiraBinario.Size = new System.Drawing.Size(143, 51);
-            this.btn_ConvertiraBinario.TabIndex = 6;
+            this.btn_ConvertiraBinario.TabIndex = 7;
             this.btn_ConvertiraBinario.Text = "Convertir a Binario";
             this.btn_ConvertiraBinario.UseVisualStyleBackColor = true;
+            this.btn_ConvertiraBinario.Click += new System.EventHandler(this.btn_ConvertiraBinario_Click);
             // 
             // btn_ConvertiraDecimal
             // 
             this.btn_ConvertiraDecimal.Location = new System.Drawing.Point(392, 267);
             this.btn_ConvertiraDecimal.Name = "btn_ConvertiraDecimal";
             this.btn_ConvertiraDecimal.Size = new System.Drawing.Size(143, 51);
-            this.btn_ConvertiraDecimal.TabIndex = 7;
+            this.btn_ConvertiraDecimal.TabIndex = 8;
             this.btn_ConvertiraDecimal.Text = "Convertir a Decimal";
             this.btn_ConvertiraDecimal.UseVisualStyleBackColor = true;
+            this.btn_ConvertiraDecimal.Click += new System.EventHandler(this.btn_ConvertiraDecimal_Click);
             // 
             // lst_Resultado
             // 
@@ -127,7 +129,7 @@
             this.lst_Resultado.Location = new System.Drawing.Point(602, 12);
             this.lst_Resultado.Name = "lst_Resultado";
             this.lst_Resultado.Size = new System.Drawing.Size(186, 310);
-            this.lst_Resultado.TabIndex = 8;
+            this.lst_Resultado.TabIndex = 6;
             // 
             // FormCalculadora
             // 
@@ -149,6 +151,7 @@
             this.Name = "FormCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de Maxi Ruiz del curso 2°C";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCalculadora_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -107,6 +107,7 @@ namespace Entidades
                 }
 
                 return Convert.ToString(n);
+                
             }
             else
             {
@@ -127,24 +128,14 @@ namespace Entidades
                 binario = Auxiliar % 2 + binario;
                 Auxiliar /= 2;
             }
-
-            if(EsBinario(binario))
-            {
-                return binario;
-            }
-            else
-            {
-                return fallo;
-            }
-
-            
-
+            return binario;       
+                        
         }
 
         public static string DecimalBinario(string numero)
         {
             double Auxiliar = Convert.ToDouble(numero);
-            string binario = DecimalBinario(numero);
+            string binario = DecimalBinario(Auxiliar);
 
             return binario;
         }
