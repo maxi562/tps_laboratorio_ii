@@ -15,26 +15,28 @@ namespace Entidades
             return Retorno;
         }
 
-        public static double Operar(double Operando1, double Operando2, char operador)
+        public static double Operar(string Operando1, string Operando2, char operador)
         {
             char Aux = ValidarOperador(operador);
+            double AuxNum = Convert.ToDouble(Operando1);
+            double AuxNum2 = Convert.ToDouble(Operando2);
             double Retorno = 0;
             
             switch (Aux)
             {
                 case '+':
-                    Retorno = Operando1 + Operando2;
+                    Retorno = AuxNum + AuxNum2;
                     break;
                 case '-':
-                    Retorno = Operando1 - Operando2;
+                    Retorno = AuxNum - AuxNum2;
                     break;
                 case '*':
-                    Retorno = Operando1 * Operando2;
+                    Retorno = AuxNum * AuxNum2;
                     break;
                 case '/':
-                    if (Operando2 != 0)
+                    if (AuxNum2 != 0)
                     {
-                        Retorno = Operando1 / Operando2;
+                        Retorno = AuxNum / AuxNum2;
                     }
                     else
                     {

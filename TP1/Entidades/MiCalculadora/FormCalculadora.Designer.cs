@@ -28,108 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ComboOperar = new System.Windows.Forms.ComboBox();
-            this.OperandoDos = new System.Windows.Forms.TextBox();
-            this.OperandoUno = new System.Windows.Forms.TextBox();
-            this.Operar = new System.Windows.Forms.Button();
-            this.LimpiarFormulario = new System.Windows.Forms.Button();
-            this.CerrarFormulario = new System.Windows.Forms.Button();
-            this.ConvertiraBinario = new System.Windows.Forms.Button();
-            this.ConvertiraDecimal = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cmb_Operar = new System.Windows.Forms.ComboBox();
+            this.txt_OperandoDos = new System.Windows.Forms.TextBox();
+            this.txt_OperandoUno = new System.Windows.Forms.TextBox();
+            this.btn_Operar = new System.Windows.Forms.Button();
+            this.btn_LimpiarFormulario = new System.Windows.Forms.Button();
+            this.btn_CerrarFormulario = new System.Windows.Forms.Button();
+            this.btn_ConvertiraBinario = new System.Windows.Forms.Button();
+            this.btn_ConvertiraDecimal = new System.Windows.Forms.Button();
+            this.lst_Resultado = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // ComboOperar
+            // cmb_Operar
             // 
-            this.ComboOperar.FormattingEnabled = true;
-            this.ComboOperar.Location = new System.Drawing.Point(307, 47);
-            this.ComboOperar.Name = "ComboOperar";
-            this.ComboOperar.Size = new System.Drawing.Size(121, 25);
-            this.ComboOperar.TabIndex = 0;
+            this.cmb_Operar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Operar.FormattingEnabled = true;
+            this.cmb_Operar.Items.AddRange(new object[] {
+            "",
+            "+",
+            "-",
+            "/",
+            "*"});
+            this.cmb_Operar.Location = new System.Drawing.Point(307, 47);
+            this.cmb_Operar.Name = "cmb_Operar";
+            this.cmb_Operar.Size = new System.Drawing.Size(121, 25);
+            this.cmb_Operar.TabIndex = 0;
             // 
-            // OperandoDos
+            // txt_OperandoDos
             // 
-            this.OperandoDos.Location = new System.Drawing.Point(482, 47);
-            this.OperandoDos.Name = "OperandoDos";
-            this.OperandoDos.Size = new System.Drawing.Size(100, 25);
-            this.OperandoDos.TabIndex = 1;
+            this.txt_OperandoDos.Location = new System.Drawing.Point(482, 47);
+            this.txt_OperandoDos.Multiline = true;
+            this.txt_OperandoDos.Name = "txt_OperandoDos";
+            this.txt_OperandoDos.PlaceholderText = "Ingrese Número";
+            this.txt_OperandoDos.Size = new System.Drawing.Size(100, 68);
+            this.txt_OperandoDos.TabIndex = 1;
             // 
-            // OperandoUno
+            // txt_OperandoUno
             // 
-            this.OperandoUno.Location = new System.Drawing.Point(134, 47);
-            this.OperandoUno.Name = "OperandoUno";
-            this.OperandoUno.Size = new System.Drawing.Size(100, 25);
-            this.OperandoUno.TabIndex = 2;
+            this.txt_OperandoUno.Location = new System.Drawing.Point(134, 47);
+            this.txt_OperandoUno.Multiline = true;
+            this.txt_OperandoUno.Name = "txt_OperandoUno";
+            this.txt_OperandoUno.PlaceholderText = "Ingrese Número";
+            this.txt_OperandoUno.Size = new System.Drawing.Size(100, 68);
+            this.txt_OperandoUno.TabIndex = 2;
             // 
-            // Operar
+            // btn_Operar
             // 
-            this.Operar.Location = new System.Drawing.Point(134, 138);
-            this.Operar.Name = "Operar";
-            this.Operar.Size = new System.Drawing.Size(100, 51);
-            this.Operar.TabIndex = 3;
-            this.Operar.Text = "Operar";
-            this.Operar.UseVisualStyleBackColor = true;
-            this.Operar.Click += new System.EventHandler(this.Operar_Click);
+            this.btn_Operar.Location = new System.Drawing.Point(134, 138);
+            this.btn_Operar.Name = "btn_Operar";
+            this.btn_Operar.Size = new System.Drawing.Size(100, 51);
+            this.btn_Operar.TabIndex = 3;
+            this.btn_Operar.Text = "Operar";
+            this.btn_Operar.UseVisualStyleBackColor = true;
+            this.btn_Operar.Click += new System.EventHandler(this.btn_Operar_Click);
             // 
-            // LimpiarFormulario
+            // btn_LimpiarFormulario
             // 
-            this.LimpiarFormulario.Location = new System.Drawing.Point(318, 138);
-            this.LimpiarFormulario.Name = "LimpiarFormulario";
-            this.LimpiarFormulario.Size = new System.Drawing.Size(100, 51);
-            this.LimpiarFormulario.TabIndex = 4;
-            this.LimpiarFormulario.Text = "Limpiar";
-            this.LimpiarFormulario.UseVisualStyleBackColor = true;
+            this.btn_LimpiarFormulario.Location = new System.Drawing.Point(318, 138);
+            this.btn_LimpiarFormulario.Name = "btn_LimpiarFormulario";
+            this.btn_LimpiarFormulario.Size = new System.Drawing.Size(100, 51);
+            this.btn_LimpiarFormulario.TabIndex = 4;
+            this.btn_LimpiarFormulario.Text = "Limpiar";
+            this.btn_LimpiarFormulario.UseVisualStyleBackColor = true;
+            this.btn_LimpiarFormulario.Click += new System.EventHandler(this.btn_LimpiarFormulario_Click);
             // 
-            // CerrarFormulario
+            // btn_CerrarFormulario
             // 
-            this.CerrarFormulario.Location = new System.Drawing.Point(482, 138);
-            this.CerrarFormulario.Name = "CerrarFormulario";
-            this.CerrarFormulario.Size = new System.Drawing.Size(100, 51);
-            this.CerrarFormulario.TabIndex = 5;
-            this.CerrarFormulario.Text = "Cerrar";
-            this.CerrarFormulario.UseVisualStyleBackColor = true;
+            this.btn_CerrarFormulario.Location = new System.Drawing.Point(482, 138);
+            this.btn_CerrarFormulario.Name = "btn_CerrarFormulario";
+            this.btn_CerrarFormulario.Size = new System.Drawing.Size(100, 51);
+            this.btn_CerrarFormulario.TabIndex = 5;
+            this.btn_CerrarFormulario.Text = "Cerrar";
+            this.btn_CerrarFormulario.UseVisualStyleBackColor = true;
+            this.btn_CerrarFormulario.Click += new System.EventHandler(this.CerrarFormulario_Click);
             // 
-            // ConvertiraBinario
+            // btn_ConvertiraBinario
             // 
-            this.ConvertiraBinario.Location = new System.Drawing.Point(197, 267);
-            this.ConvertiraBinario.Name = "ConvertiraBinario";
-            this.ConvertiraBinario.Size = new System.Drawing.Size(143, 51);
-            this.ConvertiraBinario.TabIndex = 6;
-            this.ConvertiraBinario.Text = "Convertir a Binario";
-            this.ConvertiraBinario.UseVisualStyleBackColor = true;
+            this.btn_ConvertiraBinario.Location = new System.Drawing.Point(197, 267);
+            this.btn_ConvertiraBinario.Name = "btn_ConvertiraBinario";
+            this.btn_ConvertiraBinario.Size = new System.Drawing.Size(143, 51);
+            this.btn_ConvertiraBinario.TabIndex = 6;
+            this.btn_ConvertiraBinario.Text = "Convertir a Binario";
+            this.btn_ConvertiraBinario.UseVisualStyleBackColor = true;
             // 
-            // ConvertiraDecimal
+            // btn_ConvertiraDecimal
             // 
-            this.ConvertiraDecimal.Location = new System.Drawing.Point(392, 267);
-            this.ConvertiraDecimal.Name = "ConvertiraDecimal";
-            this.ConvertiraDecimal.Size = new System.Drawing.Size(143, 51);
-            this.ConvertiraDecimal.TabIndex = 7;
-            this.ConvertiraDecimal.Text = "Convertir a Decimal";
-            this.ConvertiraDecimal.UseVisualStyleBackColor = true;
+            this.btn_ConvertiraDecimal.Location = new System.Drawing.Point(392, 267);
+            this.btn_ConvertiraDecimal.Name = "btn_ConvertiraDecimal";
+            this.btn_ConvertiraDecimal.Size = new System.Drawing.Size(143, 51);
+            this.btn_ConvertiraDecimal.TabIndex = 7;
+            this.btn_ConvertiraDecimal.Text = "Convertir a Decimal";
+            this.btn_ConvertiraDecimal.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lst_Resultado
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(602, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(186, 310);
-            this.listBox1.TabIndex = 8;
+            this.lst_Resultado.FormattingEnabled = true;
+            this.lst_Resultado.ItemHeight = 17;
+            this.lst_Resultado.Location = new System.Drawing.Point(602, 12);
+            this.lst_Resultado.Name = "lst_Resultado";
+            this.lst_Resultado.Size = new System.Drawing.Size(186, 310);
+            this.lst_Resultado.TabIndex = 8;
             // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.ConvertiraDecimal);
-            this.Controls.Add(this.ConvertiraBinario);
-            this.Controls.Add(this.CerrarFormulario);
-            this.Controls.Add(this.LimpiarFormulario);
-            this.Controls.Add(this.Operar);
-            this.Controls.Add(this.OperandoUno);
-            this.Controls.Add(this.OperandoDos);
-            this.Controls.Add(this.ComboOperar);
+            this.Controls.Add(this.lst_Resultado);
+            this.Controls.Add(this.btn_ConvertiraDecimal);
+            this.Controls.Add(this.btn_ConvertiraBinario);
+            this.Controls.Add(this.btn_CerrarFormulario);
+            this.Controls.Add(this.btn_LimpiarFormulario);
+            this.Controls.Add(this.btn_Operar);
+            this.Controls.Add(this.txt_OperandoUno);
+            this.Controls.Add(this.txt_OperandoDos);
+            this.Controls.Add(this.cmb_Operar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -143,14 +156,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox ComboOperar;
-        private System.Windows.Forms.TextBox OperandoDos;
-        private System.Windows.Forms.TextBox OperandoUno;
-        private System.Windows.Forms.Button Operar;
-        private System.Windows.Forms.Button LimpiarFormulario;
-        private System.Windows.Forms.Button CerrarFormulario;
-        private System.Windows.Forms.Button ConvertiraBinario;
-        private System.Windows.Forms.Button ConvertiraDecimal;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox cmb_Operar;
+        private System.Windows.Forms.TextBox txt_OperandoDos;
+        private System.Windows.Forms.TextBox txt_OperandoUno;
+        private System.Windows.Forms.Button btn_Operar;
+        private System.Windows.Forms.Button btn_LimpiarFormulario;
+        private System.Windows.Forms.Button btn_CerrarFormulario;
+        private System.Windows.Forms.Button btn_ConvertiraBinario;
+        private System.Windows.Forms.Button btn_ConvertiraDecimal;
+        private System.Windows.Forms.ListBox lst_Resultado;
     }
 }
